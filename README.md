@@ -66,3 +66,8 @@ e.g.
 License and Authors
 -------------------
 Authors: TODO: List authors
+=======
+chef_saikuserver
+================
+
+Cookbook Install Saiku Analytics Server 
