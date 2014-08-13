@@ -33,11 +33,11 @@ HowTo
  - Download REPO: 
 	- git clone https://github.com/bila-olavo/chef_saikuserver.git  -l /opt/chef-repo/cookbooks/saikuserver
 
- - Create your json (/opt/chef-repo/JSON_NAME.json)
+ - Create your json (/opt/chef-repo/json_name.json)
 	- Add line: 
 		-  {   "run_list": [ "recipe[saikuserver]" ] } 
 	
  - Execute CHEF-SOLO
-	- chef-solo -c /opt/chef-repo/solo.rb -j /opt/chef-repo/JASON_NAME.json
+	- chef-solo -c /opt/chef-repo/solo.rb -j /opt/chef-repo/json_name.json
 
 
