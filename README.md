@@ -1,4 +1,3 @@
-Cookbook Install Saiku Analytics Server 
 Saiku Analytics Server Cookbook
 ================
 
