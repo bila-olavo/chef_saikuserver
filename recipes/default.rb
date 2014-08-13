@@ -24,11 +24,11 @@ package "oracle-java7-set-default" do
   action :install
 end
 execute "download-saiku" do
-  cwd "/opt/chef-repo/cookbooks/files/default/"
+  cwd "/opt/chef-repo/cookbooks/saikuserver/files/default/"
   command "wget http://meteorite.bi/downloads/saiku-server-2.6.tar.gz"
 end
 execute "descompact-saiku" do
-  command "tar -xzvf /opt/chef-repo/cookbooks/files/default/saiku-server-2.6.tar.gz -C /opt/"
+  command "tar -xzvf /opt/chef-repo/cookbooks/saikuserver/files/default/saiku-server-2.6.tar.gz -C /opt/"
 end
 execute "start-saiku" do
   environment "JAVA_HOME" => "/usr/lib/jvm/java-7-oracle/jre/"
