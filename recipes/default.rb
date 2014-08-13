@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: vagrant teste
+# Cookbook Name:: Saiku Server
 # Recipe:: default
 #
 # Copyright 2014, YOUR_COMPANY_NAME
@@ -24,11 +24,14 @@ end
 package "oracle-java7-set-default" do
   action :install
 end
+execute "download-saiku" do
+  cwd "/opt/chef-repo/cookbooks/files/default/"
+  command "wget http://meteorite.bi/downloads/saiku-server-2.6.tar.gz"
+end
 execute "descompact-saiku" do
-  command "tar -xzvf /vagrant/cookbooks/deploy_vagrant/files/default/saiku-server-2.6.tar.gz -C /opt/"
+  command "tar -xzvf /opt/chef-repo/cookbooks/files/default/saiku-server-2.6.tar.gz -C /opt/"
 end
 execute "start-saiku" do
-#  cwd "/opt/saiku-server/"
   environment "JAVA_HOME" => "/usr/lib/jvm/java-7-oracle/jre/"
   command "/opt/saiku-server/start-saiku.sh"
 end
