@@ -1,8 +1,7 @@
-#
 # Cookbook Name:: Saiku Server
 # Recipe:: default
 #
-# Copyright 2014, YOUR_COMPANY_NAME
+# Copyright 2014, Olavo Queiroz Guimaraes
 #
 # All rights reserved - Do Not Redistribute
 #
